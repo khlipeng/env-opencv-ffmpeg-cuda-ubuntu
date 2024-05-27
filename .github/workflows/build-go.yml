@@ -18,7 +18,7 @@ jobs:
       - uses: docker/login-action@v1
         with:
           registry: ghcr.io
-          username: khlipeng
+          username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
           
       - run: make go-cuda-devel
